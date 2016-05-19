@@ -1,0 +1,33 @@
+include ../title/title
+include ../team-card/team-card
+include ../social/social
+include ../disc/disc
+
+mixin index-team()
+	+b.SECTION.index-team&attributes(attributes)(id="team")
+		.container
+			+title OUR TEAM
+			.col-md-10.col-md-offset-1
+				+disc.index-team__disc Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
+			.index-team__list
+					+team-card.animate-box
+						+e.avatar
+							img(src="assets/images/team-1.jpg")
+						+e.info
+							+e.name Jilia Smith
+							+e.proffesion Designer
+							+social
+					+team-card.animate-box
+						+e.avatar
+							img(src="assets/images/team-2.jpg")
+						+e.info
+							+e.name Jilia Smith
+							+e.proffesion Designer
+							+social
+					+team-card.animate-box
+						+e.avatar
+							img(src="assets/images/team-3.jpg")
+						+e.info
+							+e.name Jilia Smith
+							+e.proffesion Designer
+							+social

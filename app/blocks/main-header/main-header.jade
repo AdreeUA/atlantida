@@ -1,0 +1,48 @@
+include ../logo/logo
+include ../main-nav/main-nav
+include ../social/social
+include ../title/title
+include ../btn/btn
+include ../icon/icon
+include ../slider-header/slider-header
+
+mixin main-header()
+	+b.main-header&attributes(attributes)
+		.container
+			.main-header__navigation
+				.row
+					.col-sm-2.text-center
+						+logo
+					.col-sm-8.text-center
+						+main-nav
+					.col-sm-2.text-right
+						+social
+
+		+slider-header.text-center
+			+e.list
+				+e.item
+					h4.slider-header__subtitle Design Studio and Digital Agency
+					.col-md-6.col-md-offset-3
+						+title.title_header._white-color WE ARE ATLANTIDA
+					.col-md-12
+						+btn._header(href="#about") Get Started
+							+icon("arrow-down", "isBlock").slider-header__arrow-down
+				+e.item
+					h4.slider-header__subtitle Design Studio and Digital Agency
+					.col-md-6.col-md-offset-3
+						+title.title_header._white-color WE ARE ATLANTIDA
+					.col-md-12
+						+btn._header(href="#about") Get Started
+							+icon("arrow-down", "isBlock").slider-header__arrow-down
+				+e.item
+					h4.slider-header__subtitle Design Studio and Digital Agency
+					.col-md-6.col-md-offset-3
+						+title.title_header._white-color WE ARE ATLANTIDA
+					.col-md-12
+						+btn._header(href="#about") Get Started
+							+icon("arrow-down", "isBlock").slider-header__arrow-down
+
+
+
+
+

@@ -1,12 +1,13 @@
-# CSSSR Project Template
-**Шаблон проекта для быстрого старта**
+# Верстка адаптивного лендинга
+
+* Сделал адаптивную верстку лендинга Atlantida с использование сетки фрейморка Bootstap. Подключил слайдер Slick и сделал простой эффект Parallax для всей странице. Также настроил фильтр работ Portfolio с использованием Masonry (с англ. кирпичная кладка)
 
 
 ## Старт проекта
 
 ### Склонируй репозиторий и перейди в папку проекта
 ```
-git clone git@github.com:CSSSR/csssr-project-template.git new-project && cd new-project
+git clone https://github.com/AdreeUA/atlantida.git new-project && cd new-project
 ```
 
 ### Установи модули

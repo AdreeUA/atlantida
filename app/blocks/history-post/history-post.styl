@@ -1,0 +1,113 @@
+.history-post
+	position relative
+	padding-top rem(29px)
+	padding-bottom rem(32px)
+	text-align left
+	border 2px solid
+	transition all .5s
+	background-color #ededed
+	z-index 9
+	
+	&:hover
+		color #fff
+		background-color color-main
+		transition all .5s
+		
+		.history-post__content p 
+			color #fff
+			transition all .5s
+			font-size inherit
+	
+	&:before
+	&:after
+		position absolute
+		width 0
+		height 0
+		content ''
+		border-style solid
+		
+	&_odd
+		margin-right 9px
+		margin-bottom rem(29px)
+		padding-right rem(59px)
+		padding-left rem(23px)
+		
+		&:before
+			z-index 2
+			top 20px
+			right -8px
+			border-width 8px 8px 0 0
+			border-color #ededed transparent transparent transparent
+			
+		&:after
+			top 19px
+			right -11px
+			border-width 11px 11px 0 0
+			border-color color-main transparent transparent transparent
+			
+		&:hover
+			&:before
+				border-top-color color-main
+				transition all .5s
+			
+		.history-post__decor
+			right -35px
+			
+	&_even
+		margin-top rem(48px)
+		margin-left 9px
+		padding-right rem(23px)
+		padding-left rem(59px)
+		
+		+mobile()
+			margin-top 0
+			margin-bottom rem(29px)
+
+		&:before
+			z-index 2
+			top 20px
+			left -8px
+			border-width 0 8px 8px 0
+			border-color transparent #ededed transparent transparent
+			
+		&:after
+			top 19px
+			left -11px
+			border-width 0 11px 11px 0
+			border-color transparent color-main transparent transparent
+			
+		&:hover
+			&:before
+				border-right-color color-main
+				transition all .5s
+			
+		.history-post__decor
+			left -35px
+		
+	&__title
+		margin-bottom rem(9px)
+		font-size rem(13px)
+		text-transform uppercase
+		
+	&__date
+		font-size rem(11px)
+		
+	&__content
+		padding-top rem(26px)
+		line-height 1.4
+		
+		p
+			margin-bottom rem(20px)
+			
+		p
+			&:not(:first-child)
+				font-size 0
+			
+	&__decor
+		position absolute
+		top 12px
+		background-color color-main
+		border-radius 50%
+		size(rem(17px))
+
+

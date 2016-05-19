@@ -1,0 +1,58 @@
+include ../history-post/history-post
+include ../title/title
+include ../icon/icon
+include ../disc/disc
+
+mixin index-history()
+	+b.SECTION.index-history&attributes(attributes)(id="history")
+		.container
+			.row.text-center
+				+title HISTORY
+				+disc.index-history__disc In pulvinar, mi at rhoncus condimentum, turpis nisl scelerisque turpis, ut gravida eros tortor non arcu. In eget arcu ante. Curabitur lacinia ultricies ante, eget mattis orci vestibulum sit amet.
+			.index-history__list
+				.index-history__years 2015
+				.row
+					.col-sm-6
+						+history-post._odd
+							+e.title Donec id lobortis tellus. Maecenas vel dignissim
+							+e.date 07 October 2015
+							+e.content
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+					.col-sm-6
+						+history-post._even
+							+e.title Nam tincidunt, lacus sit amet ultrices 
+							+e.date 05 June 2015
+							+e.content
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+					.col-sm-6
+						+history-post._odd
+							+e.title Donec quis faucibus lorem
+							+e.date 07 May 2015
+							+e.content
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+					.col-sm-6
+						+history-post._even
+							+e.title Nunc efficitur laoreet turpis sed auctor.
+							+e.date 02 April 2015
+							+e.content
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+								p Praesent id augue in risus molestie euismod molestie id augue. Suspendisse a libero porttitor, lobortis eros ac, varius velit. Praesent sed eros at elit suscipit laoreet vitae condimentum risus.
+				.index-history__years 2014
+				.row
+					.col-sm-6
+						+history-post._odd
+							+e.title Donec id lobortis tellus. Maecenas vel dignissim
+							+e.date 07 October 2015
+							+e.content
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+								p Praesent id augue in risus molestie euismod molestie id augue. Suspendisse a libero porttitor, lobortis eros ac, varius velit. Praesent sed eros at elit suscipit laoreet vitae condimentum risus.
+					.col-sm-6
+						+history-post._even
+							+e.title Nunc efficitur laoreet turpis sed auctor.
+							+e.date 05 June 2015
+							+e.content
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+								p Praesent id augue in risus molestie euismod molestie id augue. Suspendisse a libero porttitor, lobortis eros ac, varius velit. Praesent sed eros at elit suscipit laoreet vitae condimentum risus.
+				.index-history__years.index-history__years_last
+
+

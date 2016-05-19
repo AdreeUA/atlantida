@@ -1,0 +1,66 @@
+.slider-header
+	position relative
+	padding-top rem(200px)
+	min-height rem(698px)
+	color #fff
+	image-bg('bg-header.jpg')
+	clearfix()
+	position relative
+	
+	&:before
+		content ''
+		position absolute
+		top 0
+		bottom 0
+		left 0
+		right 0
+		background-color rgba(#000, .5)
+	
+	&__subtitle
+		margin-bottom 23px
+	
+	.title
+		margin-bottom 44px
+	
+	.btn
+		margin-bottom 20px
+		position relative
+		
+		&:hover
+			background-color transparent
+			box-shadow 2px 2px 10px 5px rgba(#000, .75)
+			color darken(#fff, 25)
+			.slider-header__arrow-down
+				opacity .7
+	
+	.slick-arrow
+		position absolute
+		cursor pointer
+		top 50%
+		margin-top rem(-17px)
+		z-index 10
+		border-radius 50%
+
+		&:hover
+			box-shadow 0 0 15px rgba(#000, .75)
+		
+		svg
+			size(rem(34px))
+			color #fff
+			
+	&__next
+		right 13%
+	&__prev
+		left 13%
+		
+	&__arrow-down
+		width rem(15px)
+		height rem(30px)
+		position absolute
+		left 50%
+		margin-left rem(-7px)
+		bottom rem(-21px)
+		border-radius 20%
+
+		
+		

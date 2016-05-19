@@ -1,0 +1,27 @@
+include ../main-header/main-header
+include ../index-about/index-about
+include ../index-services/index-services
+include ../index-history/index-history
+include ../index-team/index-team
+include ../index-portfolio/index-portfolio
+include ../index-prices/index-prices
+include ../index-blog/index-blog
+include ../index-clients/index-clients
+include ../index-testimonial/index-testimonial
+include ../index-map/index-map
+include ../promo/promo
+
+mixin index()
+	+b.index&attributes(attributes)
+		+main-header
+		+index-about
+		+index-services.section-pad-top
+		+index-history.section-pad-top
+		+index-team.section-pad-top
+		+index-portfolio.section-pad-top
+		+index-prices.section-pad-top
+		+promo
+		+index-blog.section-pad-top
+		+index-clients.section-pad-top
+		+index-testimonial
+		+index-map

@@ -1,0 +1,46 @@
+.social
+	display block
+	
+	&__item
+		position relative
+		display inline-block
+		vertical-align top
+		
+		&:before
+			position absolute
+			top 50%
+			right -3px
+			margin-top -3px
+			width 1px
+			height 10px
+			content ''
+			background-color color-main
+		
+		&:last-of-type
+			&:before
+				width 0
+	&__link
+		padding 5px
+		display inline-block
+		font 0/0 a
+		vertical-align middle
+		color inherit
+		
+		// &:hover
+		// 	color rgba(color-main, .7)
+		
+	&__icon
+
+		&_fb
+			size(11px, 10px)
+			&:hover
+				color #3c5899
+		&_tw
+			size(11px, 9px)
+			&:hover
+				color #41abe1
+		&_bh
+			size(16px, 11px)
+			&:hover
+				color #000
+		

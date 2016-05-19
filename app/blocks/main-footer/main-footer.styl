@@ -1,0 +1,76 @@
+.main-footer
+	background-image url(../images/bg-footer.png)
+	position relative
+	padding-top rem(51px)
+	
+	&:before
+		content ''
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		background-color rgba(#292929, .95)
+		
+	+below(xs)
+		text-align center
+		
+	&__content
+		margin-bottom rem(60px)
+		
+	&__logo
+		color #fff
+		margin-bottom rem(47px)
+		
+		&:hover
+			color darken(#fff, 50)
+		
+	&__disc
+		color #949494
+		line-height 1.4
+		margin-bottom rem(40px)
+		
+	&__name
+		color #e3e3e3
+		font-family font-second
+		text-transform uppercase
+		margin-bottom rem(28px)
+		
+	&__address
+		color #949494
+		font-size rem(14px)
+		line-height 1.5
+		margin-bottom rem(37px)
+		
+	&__email
+	&__phone
+		display block
+		text-decoration none
+		line-height 1.5
+		color #e3e3e3
+		font-family font-second
+		text-transform uppercase
+		
+	&__social
+		margin-top rem(38px)
+		color #aaa
+		
+	&__copyright
+		color #949494
+		font-size 14px
+		font-style italic
+		padding-top rem(41px)
+		padding-bottom rem(36px)
+		position relative
+		
+		&:before
+			content ''
+			width 100%
+			height 1px
+			position absolute
+			top 0
+			left 0
+			background-color #3e3e3e
+			
+	&__form
+		margin-bottom rem(20px)

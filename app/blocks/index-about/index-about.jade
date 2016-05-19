@@ -1,0 +1,19 @@
+include ../title/title
+include ../statistics/statistics
+
+mixin index-about()
+	+b.SECTION.index-about&attributes(attributes)(id="about")
+		.index-about__inner
+			.container.text-center
+				.index-about__picture.animate-box
+					img.index-about__img(src="assets/images/about.jpg" alt="About Us")
+				.index-about__content.section-pad-top
+						+title.index-about__title ABOUT US
+						+disc.index-about__disc.text-left
+							| Donec aliquet, ipsum ut lobortis facilisis, nisi ligula aliquam odio, ut vehicula odio lorem in erat. Quisque quam ipsum, commodo non condimentum a, fermentum id sapien. Pellentesque sit amet sem neque. Maecenas est enim, sollicitudin sit amet nisi vel, mattis efficitur sapien. Nulla lobortis dui in aliquam placerat. Maecenas commodo odio nec neque imperdiet sagittis. Fusce mauris tellus, vulputate id finibus a, rutrum et justo. Vivamus at eros sed justo laoreet mattis vulputate vel magna. Sed quis pulvinar quam, et tempus purus. Fusce et nisi eget dui hendrerit iaculis. Cras volutpat augue tempor viverra tincidunt. Maecenas interdum scelerisque enim. Aenean interdum leo ac lectus gravida, id tincidunt sem finibus. Curabitur ac arcu blandit, tempus leo id, ultrices ante.
+						.index-about__btn.animate-box
+							+btn Contact Us
+							+btn Portfolio
+			.container
+				+statistics.index-about__statistics.animate-box
+

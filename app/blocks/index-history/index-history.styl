@@ -1,0 +1,63 @@
+.index-history
+	background-color #ededed
+	padding-bottom rem(78px)
+	
+	.title
+		margin-bottom 37px
+		
+	&__disc
+		margin-bottom 42px
+		
+	&__list
+		position relative
+		text-align center
+		
+		&:after
+			position absolute
+			top 0
+			left 50%
+			margin-left -1px
+			width 2px
+			height 100%
+			content ''
+			background-color color-main
+
+	&__years
+		position relative
+		z-index 2
+		margin-bottom rem(43px)
+		display inline-block
+		text-align center
+		vertical-align middle
+		cursor pointer
+		background-color #ededed
+		border 2px solid
+		border-radius 50%
+		transition all .5s
+		size(rem(73px))
+		
+		&:not(:first-child)
+			margin-top rem(38px)
+		
+		&:before
+			display inline-block
+			height 100%
+			vertical-align middle
+			content ''
+		
+		&:hover
+			color #fff
+			background-color color-main
+			transition all .5s
+			
+		&_last
+			margin-top rem(48px)
+			margin-bottom 0
+			background-color color-main
+			size(rem(54px))
+			
+			&:after
+				display inline-block
+				vertical-align middle
+				content ''
+				sprite $start

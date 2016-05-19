@@ -1,0 +1,34 @@
+.index-map
+	background-image url(../images/map.png)
+	background-position 50% 50%
+	height 515px
+	position relative
+	
+	&__mark
+		text-align center
+		size(rem(59px))
+		position absolute
+		top 50%
+		left 41%
+		margin-top rem(-33px)
+		background-color #2d2d2f
+		border 1.49px solid #a1a1a1
+		box-shadow 0 0 0 rem(4px) #2d2d2f
+		
+		&:before
+			content ''
+			position absolute
+			bottom rem(-10px)
+			left 50%
+			margin-left rem(-2.5px)
+			triangle(rem(9px), rem(5px), 'bottom', #2d2d2f)
+			
+	&__image
+		vertical-align middle
+		size(rem(41px), rem(29px))
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		left 0
+		margin auto

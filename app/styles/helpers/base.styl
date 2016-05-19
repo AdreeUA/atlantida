@@ -1,0 +1,36 @@
+
+rupture.desktop-cutoff = 991px
+
+rupture.scale = 0 768px 992px 1200px
+rupture.scale-names = 'xs' 'sm' 'md' 'lg'
+
+rupture.mobile-cutoff = 768px
+rupture.desktop-cutoff = 992px
+rupture.hd-cutoff = 1200px
+
+html
+	font-size 16px
+	
+	+below(md)
+		font-size 15px
+	+below(sm)
+		font-size 14px
+	+below(xs)
+		font-size 13px
+
+.text-left
+	text-align left
+	
+.text-right
+	text-align right
+	
+.text-center
+	text-align center
+	
+.col-md-pd-zero
+	padding-x(0)
+	
+// Анимация при скролле
+
+.animate-box
+	opacity 0

@@ -43,6 +43,7 @@ retinaBackground($image, $ext = 'png') {
 	}
 }
 // Create triangle
+
 triangle(width = 10px, height = 10px, direction = 'bottom', color = #000)
 
 	// Base triangle styles
@@ -90,29 +91,21 @@ triangle(width = 10px, height = 10px, direction = 'bottom', color = #000)
 	// Mixin styles for passed direction
 	styles = directions[direction]
 	{styles}
-	
-// Convert PX to REM
 
-// Default Variables
-$base--font-size ?= 16px
+// _strip-units
+// remove units of a number
+_strip-units( val )
+	unit( val, "" )
 
-rem($value, $base = $base--font-size)
-  $max = length($value)
+// Конвертация PX в REM
+rem( value, base = 16px )
+	u = unit(value)
+	base = _strip-units( base )
 
-  $remValues = ()
-  for $i in (0...$max)
-    push($remValues, _convert-to-rem( $value[$i], $base ))
-
-  return $remValues
-
-_convert-to-rem($px, $base)
-  if $is-ie && $is-ie--version <= 8
-    ($px)px
-  else if (typeof($px) == 'unit')
-    if ((unit($px) == '' || unit($px) == 'px') && ($px != 0))
-      return (round($px / $base, 3))rem
-    else
-      return 0
+	if (u is 'px')
+		return unit(value / base, 'rem')
+	else
+		return unit(value, u)
 
 // Центрирование по горизонтали блока заданной ширины
 container()
@@ -180,7 +173,7 @@ text-overflow()
 	
 
 // Скрытие текста у блока
-hidetext()
+text-hidden()
 	font 0/0 a
 	text-shadow none
 	color transparent

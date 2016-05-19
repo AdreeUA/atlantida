@@ -1,0 +1,41 @@
+include ../logo/logo
+include ../social/social
+include ../contact-form/contact-form
+
+mixin main-footer()
+	+b.main-footer&attributes(attributes)
+		.container
+			.row
+				.col-sm-4
+					+e.content.animate-box
+						+logo.__logo
+						+e.disc
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed ipsum pulvinar, consequat ipsum non, sodales augue. Donec dapibus ipsum rutrum congue egestas. Curabitur fringilla tortor non aliquam congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+						+e.name ATLANTIDA STUDIO
+						+e.address
+							| Steven Bernson, Attorney at Law<br> 
+							| 1556 Broadway, suite 416 <br>
+							| New York, NY, 10120, USA 
+						+e.A.email(href="mailto:E-mail: elegantflyers@gmail.com") E-mail: elegantflyers@gmail.com
+						+e.A.phone(href="phone: +84 956 654 972") +84 956 654 972
+						+social.__social
+
+				.col-sm-8
+					+contact-form.__form.animate-box
+						.row
+							.col-xs-6
+								+e.INPUT.item_name(placeholder="Name*" type="text" required)
+								+e.INPUT.item_phone(placeholder="Telephone*" type="text" required)
+								
+							.col-xs-6
+								+e.INPUT.item_mail(placeholder="E-mail*" type="email" required)
+								+e.INPUT.item_website(placeholder="Website" type="text")
+
+							.col-xs-12
+								+e.TEXTAREA.item_message(placeholder="Message" rows="3")
+								+e.INPUT.btn(type="submit" value="Submit")
+
+			.row
+				.col-md-12
+					+e.copyright.animate-box
+						| Copyright &copy 2015 Atlantida Theme

@@ -1,0 +1,98 @@
+.index-testimonial
+	
+	&__list
+		background-image url(../images/bg-testimonial-1.jpg)
+		background-size cover
+	
+	&__item
+		text-align center
+		padding-top rem(81px)
+		padding-bottom rem(67px)
+		position relative
+		z-index 10
+		min-height 524px
+		
+		&:before
+			content ''
+			position absolute
+			top 0 
+			left 0 
+			right 0
+			bottom 0
+			background-color rgba(#000, .5)
+	
+	&__avatar-wrap
+		size(rem(105px))
+		border-radius 50%
+		overflow hidden
+		display inline-block
+		margin-bottom rem(56px)
+		position relative
+			
+	&__avatar
+		width 100%
+		height auto
+	
+	&__content
+		color #efefef
+		font-size rem(20px)
+		margin-bottom rem(68px)
+		font-style italic
+		position relative
+		
+		&:before
+		&:after
+			position absolute
+			
+		&:before
+			content url('../images/quote-right.svg')
+			width 1.350em
+			height 1.050em
+			top -6px
+			left -9px
+			
+			+below(sm)
+				top -15px
+			
+		&:after
+			content url('../images/quote-right.svg')
+			width 1.350em
+			height 1.050em
+			bottom -7px
+			margin-left 12px
+			
+	&__name
+		color #e3e3e3
+		text-transform uppercase
+		margin-bottom rem(18px)
+		font-family font-second
+		
+	&__company
+		color #efefef
+		font-size rem(14px)
+		font-style italic
+		
+	// Slick slider
+		
+	.slick-dots
+		position absolute
+		right 0
+		left 0
+		bottom 55px
+		text-align center
+		
+		li
+			display inline-block
+			width 12px
+			height 12px
+			background-color #c5c5c5
+			margin-right 3px
+			border-radius 50%
+			text-hidden()
+			cursor pointer
+			
+			button
+				border none
+			
+		.slick-active
+			background-color #e3e3e3

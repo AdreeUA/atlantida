@@ -1,0 +1,41 @@
+include ../title/title
+include ../disc/disc
+include ../btn/btn
+
+mixin index-portfolio()
+	+b.SECTION.index-portfolio&attributes(attributes)(id="portfolio")
+		.container.text-center
+			+title PORTFOLIO
+			+disc.index-portfolio__disc Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
+			.index-portfolio__sort.animate-box
+				+btn.index-portfolio__btn-sort_active#filter-all(href="javascript:void(0)") All
+				+btn.index-portfolio__btn-sort#filter-website(href="javascript:void(0)") WEBSITE
+				+btn.index-portfolio__btn-sort#filter-brochures(href="javascript:void(0)") BROCHURES
+				+btn.index-portfolio__btn-sort#filter-logos(href="javascript:void(0)") LOGOS
+		.index-portfolio__list#portfolio-list.animate-box
+
+			a.index-portfolio__item(data-lightbox="Portfolio" class="all website" href="assets/images/por-1.jpg" title="Work № 1")
+				img.index-portfolio__image(src="assets/images/por-5.jpg" alt="Work № 5")
+
+			a.index-portfolio__item(data-lightbox="Portfolio" class="all brochures website" href="assets/images/por-2.jpg" title="Work № 2")
+				img.index-portfolio__image(src="assets/images/por-2.jpg" alt="Work № 2")
+
+			a.index-portfolio__item(data-lightbox="Portfolio" class="all brochures" href="assets/images/por-3.jpg" title="Work № 3")
+				img.index-portfolio__image(src="assets/images/por-3.jpg" alt="Work № 3")
+
+			a.index-portfolio__item(data-lightbox="Portfolio" class="all website" href="assets/images/por-4.jpg" title="Work № 4")
+				img.index-portfolio__image(src="assets/images/por-4.jpg" alt="Work № 4")
+
+			a.index-portfolio__item(data-lightbox="Portfolio" class="all logos" href="assets/images/por-5.jpg" title="Work № 5")
+				img.index-portfolio__image(src="assets/images/por-1.jpg" alt="Work № 1")
+
+			a.index-portfolio__item(data-lightbox="Portfolio" class="all logos" href="assets/images/por-8.jpg" title="Work № 8")
+				img.index-portfolio__image(src="assets/images/por-8.jpg" alt="Work № 8")
+
+			//- a.index-portfolio__item(data-lightbox="Portfolio" class="all brochures" href="assets/images/por-6.jpg" title="Work № 6")
+			//- 	img.index-portfolio__image(src="assets/images/por-6.jpg" alt="Work № 6")
+
+			a.index-portfolio__item(data-lightbox="Portfolio" class="all website logos" href="assets/images/por-7.jpg" title="Work № 7")
+				img.index-portfolio__image(src="assets/images/por-7.jpg" alt="Work № 7")
+
+

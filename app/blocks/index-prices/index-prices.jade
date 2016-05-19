@@ -1,0 +1,65 @@
+include ../title/title
+include ../disc/disc
+include ../price-box/price-box
+include ../btn/btn
+
+mixin index-prices()
+	+b.SECTION.index-prices&attributes(attributes)(id="prices")
+		.container.text-center
+			+title.index-prices__title.animate-box PRICES
+			+disc.index-prices__disc.animate-box Nullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus. Phasellus iaculis ultricies duiNullam lobortis, turpis lobortis placerat vehicula, ipsum lacus bibendum dolor, sit amet pretium odio magna eget risus.
+			.row
+				.col-md-4.col-sm-6
+					+price-box.animate-box
+						.row
+							.col-md-10.col-md-offset-1
+								+e.name BASIC
+								span.price-box__decor
+								+e.icon-wrap
+									+icon("lock").icon._lock
+								+e.price
+									SPAN.price-box__price_val $
+									| 10
+								+e.UL.list
+									+e.item Full Access
+									+e.item Unlimited Edition
+									+e.item Full Backup
+									+e.item Free Tea and Free Mockup
+									+e.item Several Prices
+								+btn.btn Sign Up
+				.col-md-4.col-sm-6
+					+price-box.animate-box
+						.row
+							.col-md-10.col-md-offset-1
+								+e.name ADVANCED
+								span.price-box__decor
+								+e.icon-wrap
+									+icon("bullhorn").icon._bullhorn
+								+e.price
+									SPAN.price-box__price_val $
+									| 20
+								+e.UL.list
+									+e.item Full Access
+									+e.item Unlimited Edition
+									+e.item Full Backup
+									+e.item Free Tea and Free Mockup
+									+e.item Several Prices
+								+btn.btn Sign Up
+				.col-md-4.col-sm-6
+					+price-box.animate-box
+						.row
+							.col-md-10.col-md-offset-1
+								+e.name PRO
+								span.price-box__decor
+								+e.icon-wrap
+									+icon("fire").icon._fire
+								+e.price
+									SPAN.price-box__price_val $
+									| 30
+								+e.UL.list
+									+e.item Full Access
+									+e.item Unlimited Edition
+									+e.item Full Backup
+									+e.item Free Tea and Free Mockup
+									+e.item Several Prices
+								+btn.btn Sign Up

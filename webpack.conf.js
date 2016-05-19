@@ -41,7 +41,7 @@ export default function makeWebpackConfig({
 			modulesDirectories: [
 				'node_modules'
 			],
-			extensions: ['.js', '']
+			extensions: ['', '.js', '.jsx', '.css']
 		},
 		module: {
 			preLoaders: [{

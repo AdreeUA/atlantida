@@ -1,0 +1,30 @@
+include ../title/title
+include ../disc/disc
+
+mixin index-services()
+	+b.SECTION.index-services&attributes(attributes)(id="services").animate-box
+		.container
+			+title.title_white-color SERVICES
+			+disc.index-services__disc Donec aliquet, ipsum ut lobortis facilisis, nisi ligula aliquam odio, ut vehicula odio lorem in erat. Quisque quam ipsum, commodo non condimentum a, fermentum id sapien. Pellentesque sit amet sem neque. 
+			.index-services__boxes
+				.row
+					.col-md-3.col-sm-6
+						.index-services__box.animate-box
+							+icon("pencil", "isBlock").index-services__icon.index-services__icon_graphic
+							h4.index-services__heading GRAPHIC<br> DESIGN
+							p.index-services__text Nunc non sem vitae neque tristique pellentesque. Donec vitae vehicula mauris. Proin elementum mauris ut ante tristique rutrum. Quisque tristique, dui iaculis commodo consectetur, libero nibh tincidunt tortor, in sollicitudin arcu tellus non puruslibero nibh tincidunt tortor, in sollicitudin arcu
+					.col-md-3.col-sm-6
+						.index-services__box.animate-box
+							+icon("display", "isBlock").index-services__icon.index-services__icon_website
+							h4.index-services__heading WEBSITE<br> DESIGN
+							p.index-services__text Nunc non sem vitae neque tristique pellentesque. Donec vitae vehicula mauris. Proin elementum mauris ut ante tristique rutrum. Quisque tristique, dui iaculis commodo consectetur, libero nibh tincidunt tortor, in sollicitudin arcu tellus non puruslibero nibh tincidunt tortor, in sollicitudin arcu
+					.col-md-3.col-sm-6
+						.index-services__box.animate-box
+							+icon("stats-bars", "isBlock").index-services__icon.index-services__icon_seo
+							h4.index-services__heading SEO &#38;<br> ANALITYCS
+							p.index-services__text Nunc non sem vitae neque tristique pellentesque. Donec vitae vehicula mauris. Proin elementum mauris ut ante tristique rutrum. Quisque tristique, dui iaculis commodo consectetur, libero nibh tincidunt tortor, in sollicitudin arcu tellus non puruslibero nibh tincidunt tortor, in sollicitudin arcu
+					.col-md-3.col-sm-6
+						.index-services__box.animate-box
+							+icon("wordpress", "isBlock").index-services__icon.index-services__icon_wp
+							h4.index-services__heading WORDPRESS<br> PROGRAMING
+							p.index-services__text Nunc non sem vitae neque tristique pellentesque. Donec vitae vehicula mauris. Proin elementum mauris ut ante tristique rutrum. Quisque tristique, dui iaculis commodo consectetur, libero nibh tincidunt tortor, in sollicitudin arcu tellus non puruslibero nibh tincidunt tortor, in sollicitudin arcu

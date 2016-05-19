@@ -1,0 +1,13 @@
+include ../icon/icon
+
+mixin social()
+	+b.UL.social&attributes(attributes)
+		+e.item
+			+e.link_fb(href="#" title="Social") Facebook
+				+icon("facebook").icon_fb
+		+e.item
+			+e.link_tw(href="#" title="Social") Twitter
+				+icon("twitter").icon_tw
+		+e.item
+			+e.link_bh(href="#" title="Social") Behance
+				+icon("behance").icon_bh
