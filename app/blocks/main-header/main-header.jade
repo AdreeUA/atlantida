@@ -7,7 +7,7 @@ include ../icon/icon
 include ../slider-header/slider-header
 
 mixin main-header()
-	+b.main-header&attributes(attributes)
+	+b.HEADER.main-header&attributes(attributes)
 		.container
 			.main-header__navigation
 				.row
@@ -41,8 +41,3 @@ mixin main-header()
 					.col-md-12
 						+btn._header(href="#about") Get Started
 							+icon("arrow-down", "isBlock").slider-header__arrow-down
-
-
-
-
-

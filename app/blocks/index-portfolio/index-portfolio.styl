@@ -1,24 +1,29 @@
 .index-portfolio
 	margin-bottom -10px
-	
+
 	.title
 		margin-bottom rem(37px)
-		
+
 	&__disc
 		margin-bottom rem(52px)
-		
+
 	&__list
 		font-size 0
-		
+
 	&__image
 		width 100%
-	
+
 	&__item
 		width 25%
-		
+
+		+below(768px)
+			width 33.33333%
+		+below(550px)
+			width 50%
+
 	&__sort
-		margin-bottom rem(44px)	
-	
+		margin-bottom rem(44px)
+
 	&__btn-sort
 		min-width auto
 		padding-x(rem(20px))

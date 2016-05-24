@@ -4,12 +4,12 @@
 	text-align center
 	clearfix()
 	overflow hidden
-	
+
 	&__item
 		position relative
 		font-family font-second
 		margin-bottom rem(63px)
-		
+
 		&:before
 			position absolute
 			top 0
@@ -23,7 +23,7 @@
 		margin-bottom 21px
 		display inline-block
 		vertical-align top
-		
+
 		&_winner
 			sprite $winner
 		&_checked
@@ -32,23 +32,23 @@
 			sprite $clients
 		&_briefcase
 			sprite $briefcase
-			
+
 	&__heading
 		margin-bottom 28px
 		line-height 1.4
 		text-transform uppercase
-		
+
 	&__count
-		font-size 45px
-	
+		font-size rem(45px)
+
+		+below(450px)
+			font-size rem(35px)
+
 	// .col-md-3:last-of-type
 	// 	.statistics__item
 	// 		&:before
-	// 			width 0	
-				
+	// 			width 0
+
 .statistics > .statistics__item:nth-of-type(2)
 	&:before
 		width 0
-				
-
-		

@@ -1,14 +1,8 @@
-import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
 import 'slick-carousel';
 import 'lightbox2';
 import '../../node_modules/isotope-layout/dist/isotope.pkgd.min.js';
 import '../../node_modules/waypoints/lib/jquery.waypoints.min.js';
-
-
-$(() => {
-	svg4everybody();
-});
 
 // Слайдер
 
@@ -27,19 +21,18 @@ $(document).ready(function () {
 		autoplay: true,
 		dots: true,
 		arrows: false,
-		autoplaySpeed: 5000,
+		autoplaySpeed: 5000
 	});
 });
 
 // Mosonry для Portfolio
 
+let button = 1;
+const buttonClass = 'index-portfilio__btn-sort_active';
+const $container = $('#portfolio-list');
 
-var button = 1;
-var buttonClass = 'index-portfilio__btn-sort_active';
-var $container = $('#portfolio-list');
-    
 $container.isotope({
-	// options... 
+	// options...
 	itemSelector: '.index-portfolio__item',
 	percentPosition: true,
 	masonry: {
@@ -49,82 +42,94 @@ $container.isotope({
 });
 
 // Фильтрация Portfolio по категориям
-function checkButton(){
+function checkButton() {
 	$('.index-portfilio__btn-sort').removeClass(buttonClass);
-	if ( button === 1 ) {
+	if (button === 1) {
 		$('#filter-all').addClass(buttonClass);
 	}
-	if ( button === 2 ) {
+	if (button === 2) {
 		$('#filter-website').addClass(buttonClass);
 	}
-	if ( button === 3 ) {
+	if (button === 3) {
 		$('#filter-brochures').addClass(buttonClass);
-	}	
-	if ( button === 4 ) {
+	}
+	if (button === 4) {
 		$('#filter-logos').addClass(buttonClass);
 	}
 };
 
-	$('#filter-all').click( function () {
-		$container.isotope( {filter: '.all'} );
-		button = 1;
-		checkButton();
+$('#filter-all').click(function () {
+	$container.isotope({
+		filter: '.all'
 	});
-	$('#filter-website').click( function () {
-		$container.isotope( {filter: '.website'} );
-		button = 2;
-		checkButton();
-	});
-	$('#filter-brochures').click( function () {
-		$container.isotope( {filter: '.brochures'} );
-		button = 3;
-		checkButton();
-	});
-	$('#filter-logos').click(function () {
-		$container.isotope( {filter: '.logos'} );
-		button = 3;
-		checkButton();
-	});
-
+	button = 1;
 	checkButton();
+});
+$('#filter-website').click(function () {
+	$container.isotope({
+		filter: '.website'
+	});
+	button = 2;
+	checkButton();
+});
+$('#filter-brochures').click(function () {
+	$container.isotope({
+		filter: '.brochures'
+	});
+	button = 3;
+	checkButton();
+});
+$('#filter-logos').click(function () {
+	$container.isotope({
+		filter: '.logos'
+	});
+	button = 3;
+	checkButton();
+});
+
+checkButton();
 
 // Анимация при скроле
 // Animations
 
-var contentWayPoint = function() {
-	var i = 0;
-	$('.animate-box').waypoint( function( direction ) {
+const contentWayPoint = function () {
+	let i = 0;
+	$('.animate-box').waypoint(function (direction) {
 
-		if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-			
+		if (direction === 'down' && !$(this.element).hasClass('animated')) {
+
 			i++;
 
 			$(this.element).addClass('item-animate');
-			setTimeout(function(){
+			setTimeout(function () {
 
-				$('.animate-box.item-animate').each(function(k){
-					var el = $(this);
-					setTimeout( function () {
+				$('.animate-box.item-animate').each(function (k) {
+					const el = $(this);
+					setTimeout(function () {
 						el.addClass('fadeInUp animated');
 						el.removeClass('item-animate');
-					},  k * 200, 'easeInOutExpo' );
+					}, k * 200, 'easeInOutExpo');
 				});
-				
+
 			}, 100);
-			
+
 		}
 
-	} , { offset: '95%' } );
+	}, {
+		offset: '95%'
+	});
 };
 
-$(function(){
+$(function () {
 
 	contentWayPoint();
 
-	});
+});
 
-$("body").on('click', '[href*="#"]', function(e){
-  var fixed_offset = 0;
-  $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1300);
-  e.preventDefault();
+$('body').on('click', '[href*="#"]', function (e) {
+	const fixedOffset = 0;
+	$('html,body').stop().animate({
+		scrollTop: $(this.hash).offset().top - fixedOffset
+	}, 1300);
+	e.preventDefault();
 });
