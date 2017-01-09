@@ -2,7 +2,6 @@
 app/styles/helpers/svg-size.styl
 app/styles/sprites
 app/temp
-dist
 psd
 
 # Numerous always-ignore extensions
